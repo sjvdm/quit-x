@@ -11,7 +11,7 @@
 
 <div class="counter-group">
   <!-- Leaf Icon -->
-  <img src="/images/leaf-icon.svg" alt="leaf icon" class="icon" />
+  <!-- <img src="/images/leaf-icon.svg" alt="leaf icon" class="icon" /> -->
 
   <!-- Dynamic title "X Free" -->
   <h3 class="counter-title">{counter.name} Free</h3>
