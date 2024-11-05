@@ -3,7 +3,10 @@
   import { onMount } from "svelte";
 
   // Initialize counters array
-  let counters = [{ count: 10, name: "Facebook", lastIncrement: "Never" },{ count: 3, name: "Anger", lastIncrement: "Never" }];
+  let counters = [
+    { count: 10, name: "Facebook", lastIncrement: "Never" },
+    { count: 3, name: "Anger", lastIncrement: "Never" }
+  ];
 
   // Load the counters array from localStorage on mount
   onMount(() => {
