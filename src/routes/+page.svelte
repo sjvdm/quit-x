@@ -76,8 +76,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
     margin: 0;
+    min-height: 100vh;
   }
 
   .logo-container {
@@ -95,7 +95,11 @@
   .container {
     width: 90%;
     max-width: 500px;
+    min-width: 100vh;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .add-delete {

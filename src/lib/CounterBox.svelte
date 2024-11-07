@@ -31,7 +31,7 @@
     />
     <button class="button save" on:click={() => saveCounterName(index, counter.name)}>Save</button>
     <button class="button reset" on:click={() => resetCounter(index)}>Reset</button>
-    {#if index > 0}
+    {#if index >= 0}
       <button class="button delete" on:click={() => deleteCounter(index)}>Delete</button>
     {/if}
   </div>

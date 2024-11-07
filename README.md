@@ -36,3 +36,12 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## Deploy to Google Cloud
+
+1. Log in, download SDK, struggle for hours due to shitty google errors
+2. 
+```
+npm run build
+google app deploy build/app.yaml
+```
