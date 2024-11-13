@@ -69,7 +69,7 @@
    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
   :global(body) {
-    background: url('/images/background.svg') no-repeat center center fixed;
+    background: url('/images/background.svg') repeat center center fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
     display: flex;
