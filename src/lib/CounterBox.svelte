@@ -13,8 +13,8 @@
   <!-- Leaf Icon -->
   <!-- <img src="/images/leaf-icon.svg" alt="leaf icon" class="icon" /> -->
 
-  <!-- Dynamic title "X Free" -->
-  <h3 class="counter-title">{counter.name} Free</h3>
+  <!-- Dynamic title "X" -->
+  <h3 class="counter-title">{counter.name}</h3>
 
   <!-- Counter Button -->
   <button class="counter-button" on:click={() => incrementCounter(index)}>

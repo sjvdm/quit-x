@@ -4,8 +4,9 @@
 
   // Initialize counters array
   let counters = [
-    { count: 10, name: "Facebook", lastIncrement: "Never" },
-    { count: 3, name: "Anger", lastIncrement: "Never" }
+    { count: 10, name: "Facebook Free", lastIncrement: "Never" },
+    { count: 3, name: "Anger Free", lastIncrement: "Never" },
+    { count: 20, name: "Act of kindness", lastIncrement: "Never" },
   ];
 
   // Load the counters array from localStorage on mount
