@@ -1,6 +1,8 @@
-# sv
+# Quit-X
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Keep yourself accountable!
+
+Powered by [`sv`](https://github.com/sveltejs/cli). Most of this site was built within 2 days by chatgpt. Thanks chat.
 
 ## Creating a project
 
@@ -45,7 +47,3 @@ You can preview the production build with `npm run preview`.
 npm run build
 google app deploy build/app.yaml
 ```
-
-## Notes
-
-- Most of this site was built within 2 days by chatgpt. Thanks chat.
