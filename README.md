@@ -40,8 +40,12 @@ You can preview the production build with `npm run preview`.
 ## Deploy to Google Cloud
 
 1. Log in, download SDK, struggle for hours due to shitty google errors
-2. 
+2. Then run below.
 ```
 npm run build
 google app deploy build/app.yaml
 ```
+
+## Notes
+
+- Most of this site was built within 2 days by chatgpt. Thanks chat.
