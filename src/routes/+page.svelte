@@ -147,6 +147,21 @@
         margin-top: 0px;
     }
 
+.premium-button {
+    background-color: #007BFF; /* Adjust to match the site's primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .premium-button:hover {
+    background-color: #0056b3; /* Slightly darker shade for hover effect */
+  }
+
 </style>
 
 <!-- Logo Section -->
@@ -175,22 +190,31 @@
   {/if}
 </div>
 
+
+<div style="text-align: center; margin-top: 20px;">
+  <button class="premium-button" on:click={() => window.location.href='https://forms.gle/ThbEU48ebZqP1CJT7'}>
+    Go Premium
+  </button>
+</div>
+
 <!-- Centered FAQ Section at the bottom -->
 <div class="faq-container">
   <h2>Frequently Asked Questions</h2>
 
-  {#each ['What is this app for?', 'How do I add a counter?', 'How do I reset a counter?', 'Is my data stored?'] as question, index}
+  {#each ['What is this app for?', 'How do I add a counter?', 'How do I reset a counter?', 'Is my data stored?','Why the ads?'] as question, index}
     <div class="faq-item {openFAQ === index ? 'open' : ''}" on:click={() => toggleFAQ(index)}>
       <div class="faq-question">{question}</div>
       <div class="faq-answer">
         {#if index === 0}
-          <p>This app helps you track counts for various activities or goals.</p>
+          <p>This app helps you track counts for various activities or goals. Want to quit Facebook? Keep a counter - daily.</p>
         {:else if index === 1}
           <p>To add a counter, simply click the "Add Counter" button.</p>
         {:else if index === 2}
           <p>You can reset a counter by clicking the "Reset" button next to each counter.</p>
         {:else if index === 3}
           <p>No information is stored anywhere, except locally on your browser.</p>
+        {:else if index === 4}
+          <p>I have tried making the ads as non-intrusive as possible! Income is used to pay for hosting etc.</p>
         {/if}
       </div>
     </div>
