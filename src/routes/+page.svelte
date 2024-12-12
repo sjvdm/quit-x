@@ -224,13 +224,13 @@
       <div class="faq-question">{question}</div>
       <div class="faq-answer">
         {#if index === 0}
-          <p>This app helps you track counts for various activities or goals. Want to quit Facebook? Keep a counter - daily.</p>
+          <p>This app helps you track counts for various activities or goals. Want to quit Facebook? Keep a counter - daily. Just click on the "days" counter!</p>
         {:else if index === 1}
-          <p>To add a counter, simply click the "Add Counter" button.</p>
+          <p>To add a counter, simply click the "Add Counter" button. You can call the counter anything you want.</p>
         {:else if index === 2}
           <p>You can reset a counter by clicking the "Reset" button next to each counter.</p>
         {:else if index === 3}
-          <p>No information is stored anywhere, except locally on your browser.</p>
+          <p>No information is stored anywhere, except locally on your browser. You can verify by checking the code here: <a href="https://github.com/sjvdm/quit-x" target="_blank">Github repo</a></p>
         {:else if index === 4}
           <p>I have tried making the ads as non-intrusive as possible! Income is used to pay for hosting etc. The code is available here: <a href="https://github.com/sjvdm/quit-x" target="_blank">Github repo</a></p>
         {/if}
