@@ -7,6 +7,8 @@
   export let resetCounter;
   export let deleteCounter;
   export let saveCounterName;
+  // [ADDED] Tooltip state passed from parent
+  export let showTooltip = false;
 </script>
 
 <div class="counter-group">
@@ -17,9 +19,18 @@
   <h3 class="counter-title">{counter.name}</h3>
 
   <!-- Counter Button -->
-  <button class="counter-button" on:click={() => incrementCounter(index)}>
-    {counter.count} days
-  </button>
+  <!-- [MODIFIED] Added tooltip container -->
+  <div class="tooltip-container" style="position: relative;">
+    <button class="counter-button" on:click={() => incrementCounter(index)}>
+      {counter.count} days
+    </button>
+    <!-- [ADDED] Tooltip display -->
+    {#if showTooltip}
+      <div class="tooltip" style="position: absolute; top: -10%; left: 90%; transform: translateX(-50%); color: red;">
+         &lt--- Click here!
+      </div>
+    {/if}
+  </div>
 
   <!-- Counter name input and controls -->
   <div class="controls">
@@ -100,5 +111,11 @@
   .small-text {
     font-size: 0.9em;
     color: #718096;
+  }
+
+  /* [ADDED] Tooltip styling */
+  .tooltip {
+    font-size: 1.5em;
+    font-weight: bold;
   }
 </style>

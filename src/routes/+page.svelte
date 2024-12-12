@@ -9,13 +9,25 @@
     { count: 20, name: "Act of kindness", lastIncrement: "Never" },
   ];
 
+  // [ADDED] Track if the tooltip should display
+  let showTooltip = false;
+
   // Load the counters array from localStorage on mount
   onMount(() => {
     const savedCounters = localStorage.getItem("counters");
     if (savedCounters) {
       counters = JSON.parse(savedCounters);
     }
+    // [ADDED] Check if the tooltip has been seen before
+    const tooltipSeen = localStorage.getItem("tooltipSeen");
+    showTooltip = !tooltipSeen; // Show tooltip if it's not seen before
   });
+
+  // [ADDED] Mark tooltip as seen
+  function markTooltipSeen() {
+    showTooltip = false;
+    localStorage.setItem("tooltipSeen", "true");
+  }
 
   // Save the updated counters array to localStorage
   function saveCountersToLocalStorage() {
@@ -27,6 +39,11 @@
     counters[index].count++;
     counters[index].lastIncrement = new Date().toLocaleString();
     saveCountersToLocalStorage();
+    // [ADDED] Mark tooltip as seen after the first interaction
+    if (showTooltip) {
+      markTooltipSeen();
+    }
+
   }
 
   // Reset a specific counter and save to localStorage
@@ -182,6 +199,7 @@
       resetCounter={resetCounter}
       deleteCounter={deleteCounter}
       saveCounterName={saveCounterName}
+      showTooltip={showTooltip && index === 0}
     />
   {/each}
 
@@ -214,9 +232,10 @@
         {:else if index === 3}
           <p>No information is stored anywhere, except locally on your browser.</p>
         {:else if index === 4}
-          <p>I have tried making the ads as non-intrusive as possible! Income is used to pay for hosting etc.</p>
+          <p>I have tried making the ads as non-intrusive as possible! Income is used to pay for hosting etc. The code is available here: <a href="https://github.com/sjvdm/quit-x" target="_blank">Github repo</a></p>
         {/if}
       </div>
     </div>
   {/each}
 </div>
+
