@@ -86,6 +86,15 @@
 
    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+  :global(html, body) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden; /* [ADDED] Prevent horizontal scrolling */
+  }
+
+
   :global(body) {
     background: url('/images/background.svg') repeat center center fixed;
     background-size: cover;
@@ -96,6 +105,11 @@
     flex-direction: column;
     margin: 0;
     min-height: 100vh;
+
+    /* [UPDATED] Ensure proper centering for mobile devices */
+    padding: 0 10px;
+    box-sizing: border-box;
+
   }
 
   .logo-container {
@@ -111,7 +125,7 @@
   }
 
   .container {
-    width: 90%;
+    width: 100%; /* [UPDATED] Adjust width for smaller screens */
     max-width: 500px;
     min-width: 100vh;
     padding: 20px;
@@ -128,9 +142,31 @@
     margin: 20px 0;
   }
 
+  /* [ADDED] Responsive adjustments for smaller screens */
+  @media (max-width: 600px) {
+    .container {
+      max-width: 100%; /* Use full width */
+      padding: 10px;   /* Reduce padding */
+    }
+
+    .logo {
+      width: 80px; /* Smaller logo for mobile */
+    }
+
+    .premium-button {
+      font-size: 0.9rem; /* Smaller button text */
+      padding: 8px 15px; /* Reduced padding */
+    }
+
+    .add-delete {
+      font-size: 0.9em; /* Adjust font size */
+      padding: 10px; /* [ADDED] Touch-friendly padding */
+    }
+  }
+
   /* FAQ Section */
   .faq-container {
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     margin-top: 40px;
     text-align: center;
@@ -162,6 +198,7 @@
         color: #3C67B1;
         text-align: center;
         margin-top: 0px;
+        font-size: 1.5em; /* [UPDATED] Adjust font size for mobile */
     }
 
 .premium-button {
