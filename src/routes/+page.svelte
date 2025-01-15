@@ -201,6 +201,14 @@
         font-size: 1.5em; /* [UPDATED] Adjust font size for mobile */
     }
 
+    .h3-main {
+        font-family: 'Montserrat', sans-serif;
+        color: #3C67B1;
+        text-align: center;
+        margin-top: 0px;
+        font-size: 1em; /* [UPDATED] Adjust font size for mobile */
+    }
+
 .premium-button {
     background-color: #007BFF; /* Adjust to match the site's primary color */
     color: white;
@@ -226,6 +234,7 @@
 </svg>
 </div>
 <h1 class="h1-main">Keep Yourself Accountable</h1>
+<h1 class="h3-main">A simple, daily, accountability tracker</h1>
 
 <div class="container">
   {#each counters as counter, index}
