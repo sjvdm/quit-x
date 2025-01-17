@@ -278,7 +278,7 @@
         {:else if index === 3}
           <p>No information is stored anywhere, except locally on your browser. You can verify by checking the code here: <a href="https://github.com/sjvdm/quit-x" target="_blank">Github repo</a></p>
         {:else if index === 4}
-          <p>I have tried making the ads as non-intrusive as possible! Income is used to pay for hosting etc. The code is available here: <a href="https://github.com/sjvdm/quit-x" target="_blank">Github repo</a></p>
+          <p>You might receive ads on this site. I have tried making the ads as non-intrusive as possible! Income is used to pay for hosting etc. The code is available here: <a href="https://github.com/sjvdm/quit-x" target="_blank">Github repo</a></p>
         {/if}
       </div>
     </div>
