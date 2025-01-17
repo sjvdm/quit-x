@@ -25,11 +25,10 @@
       {counter.count} days
     </button>
     <!-- [ADDED] Tooltip display -->
-    {#if showTooltip}
+    <!--
       <div class="tooltip" style="position: absolute; top: -10%; left: 90%; transform: translateX(-50%); color: red;">
          &lt--- Click here!
-      </div>
-    {/if}
+      </div> -->
   </div>
 
   <!-- Counter name input and controls -->
@@ -55,12 +54,14 @@
   .counter-group {
     text-align: center;
     margin: 20px 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: #F7F9FA;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.1);
     border: 2px solid #3182ce;
   }
+
+  
 
   .icon {
     width: 30px;  /* Adjust size as needed */
@@ -104,9 +105,10 @@
     cursor: pointer;
   }
 
-  .save { background-color: #edf2f7; }
-  .reset { background-color: #e2e8f0; }
-  .delete { background-color: #fccaca; }
+  .save { background:linear-gradient(to bottom,#A8D5BA, #6DBD81) }
+  .reset { background-color: #D1D5DB; }
+  .delete { background: linear-gradient(to bottom,#FECACA, #F87171) }
+
 
   .small-text {
     font-size: 0.9em;

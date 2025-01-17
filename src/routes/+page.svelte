@@ -96,7 +96,8 @@
 
 
   :global(body) {
-    background: url('/images/background.svg') repeat center center fixed;
+    /* background: url('/images/background.svg') repeat center center fixed; */
+    background: radial-gradient(circle, #EAF4F4, #CFE0E8, #A9BBC6);
     background-size: cover;
     font-family: Arial, sans-serif;
     display: flex;
@@ -173,7 +174,7 @@
   }
 
   .faq-item {
-    border: 1px solid #ccc;
+    border: 3px solid #3C67B1;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px;
@@ -182,11 +183,13 @@
 
   .faq-question {
     font-weight: bold;
+    color: #3C67B1;
   }
 
   .faq-answer {
     padding: 10px;
     display: none;
+    color: #3C67B1;
   }
 
   .faq-item.open .faq-answer {
@@ -198,7 +201,7 @@
         color: #3C67B1;
         text-align: center;
         margin-top: 0px;
-        font-size: 1.5em; /* [UPDATED] Adjust font size for mobile */
+        font-size: 1.7em; /* [UPDATED] Adjust font size for mobile */
     }
 
     .h3-main {
@@ -206,7 +209,7 @@
         color: #3C67B1;
         text-align: center;
         margin-top: 0px;
-        font-size: 1em; /* [UPDATED] Adjust font size for mobile */
+        font-size: 1.2em; /* [UPDATED] Adjust font size for mobile */
     }
 
 .premium-button {
@@ -263,7 +266,7 @@
 
 <!-- Centered FAQ Section at the bottom -->
 <div class="faq-container">
-  <h2>Frequently Asked Questions</h2>
+  <h2 style="color: #3C67B1;">Frequently Asked Questions</h2>
 
   {#each ['What is this app for?', 'How do I add a counter?', 'How do I reset a counter?', 'Is my data stored?','Why the ads?'] as question, index}
     <div class="faq-item {openFAQ === index ? 'open' : ''}" on:click={() => toggleFAQ(index)}>
