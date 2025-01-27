@@ -41,7 +41,7 @@ You can preview the production build with `npm run preview`.
 
 ## Deploy to Google Cloud
 
-1. Log in, download SDK, struggle for hours due to shitty google errors
+1. Log in, download SDK, struggle for hours due to "strange" google errors
 2. Then run below.
 ```
 npm run build
